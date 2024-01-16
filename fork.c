@@ -6,17 +6,22 @@ void forke(){
      int p=fork();
     
     if(p==0){
-        printf("Child Process");
+        printf("\nChild Process\n");
+        printf(" \nthe Id of child process  is -: %d",getpid());
     }
     else if(p==-1){
-        printf("Invalid");
+        printf("\nInvalid");
     }
     else if(p==1){
-        printf("Parent process");
+        printf("\nParent process");
+        printf(" \nthe Id of Parent process  is -: %d",getpid());
     }
 }
 int main() {
    
    forke();
+   forke();
+   printf("\nhello");
+   
     return 0;
 }
